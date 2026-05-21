@@ -27,3 +27,15 @@ Facade pattern kullanilmasini onerdI. OrderFacade sinifi tum islemleri yonetiyor
 ## Ogrendiklerim
 Decorator pattern sayesinde mevcut kodu hic degistirmeden yeni ozellikler ekleyebildim.
 Facade pattern ise karmasik yapilari basit bir arayuze indirgiyor.
+
+## AI'nin Eksik veya Yanlis Onerdigi Seyler
+
+AI basta Facade pattern icin cok genel bir yapi onerdi.
+Checkout metodunda sadece print_receipt() cagirmasi yeterliydi dedi,
+ama vergi ve kargo decorator'larini otomatik uygulamak icin
+include_tax ve include_shipping parametrelerini kendim eklemek zorunda kaldim.
+AI bu detayi atladi.
+
+Ayrica AI Adapter pattern onerisinde bulundu ancak projemizde
+farkli arayuzleri birlestirme ihtiyaci yoktu, bu yuzden Adapter yerine
+Facade secmek daha dogru bir karar oldu.

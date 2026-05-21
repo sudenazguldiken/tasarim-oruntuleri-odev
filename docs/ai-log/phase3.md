@@ -27,3 +27,16 @@ algoritma secimini runtime'da degistirmeye odaklandigini acikladi.
 ## Ogrendiklerim
 Observer pattern sayesinde ShoppingCart baska sistemleri dogrudan cagirmak
 zorunda kalmadi. Yeni bir observer eklemek icin mevcut kodu degistirmek gerekmiyor.
+
+## AI Olmadan Ne Kadar Surerdi?
+
+Bu faz AI olmadan en az 3-4 saat surerdi. Observer pattern icin
+dogru event mekanizmasini kurmak ve Strategy ile Factory arasindaki
+farki anlamak zaman alirdi.
+
+## AI Bizi Nerede Yaniltti?
+
+AI ilk basta Observer icin event sistemi yerine direkt metod cagrisi onerdi.
+Yani StockObserver'i ShoppingCart'in icinden dogrudan cagirmami soyledi.
+Bu Observer pattern'in amacina aykiri olurdu cunku ShoppingCart observer'lari
+tanimamali. Bunu fark edip notify_observers mekanizmasini kendim kurdum.
